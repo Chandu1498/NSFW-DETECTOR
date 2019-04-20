@@ -19,13 +19,15 @@ result :
 
 This is a set of scripts that allows for an automatic collection of tens of thousands of images for the following (loosely defined) categories to be later used for training an image classifier:
 
-porn - pornography images
-hentai - hentai images, but also includes pornographic drawings
-sexy - sexually explicit images, but not pornography. Think nude photos, playboy, bikini, etc.
-neutral - safe for work neutral images of everyday things and people
-drawings - safe for work drawings (including anime)
-Here is what each script (located under scripts directory) does:
+1.)porn - pornography images.
+2.)hentai - hentai images, but also includes pornographic drawings.
+3.)sexy - sexually explicit images, but not pornography. Think nude photos, playboy, bikini, etc.
+4.)neutral - safe for work neutral images of everyday things and people.
+5.)drawings - safe for work drawings (including anime).
 
+
+
+Here is what each script (located under scripts directory) does:
 1_get_urls.sh - iterates through text files under scripts/source_urls downloading URLs of images for each of the 5 categories above. The Ripme application performs all the heavy lifting. The source URLs are mostly links to various subreddits, but could be any website that Ripme supports. Note: I already ran this script for you, and its outputs are located in raw_data directory. No need to rerun unless you edit files under scripts/source_urls.
 2_download_from_urls.sh - downloads actual images for urls found in text files in raw_data directory.
 3_optional_download_drawings.sh - (optional) script that downloads SFW anime images from the Danbooru2018 database.
